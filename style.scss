@@ -1,0 +1,104 @@
+@mixin mwM($d, $f) {
+  max-width: $d;
+  margin: $f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+.main,
+.footer-container {
+  @include mwM(906px, 0 auto);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 71px auto 0;
+  padding: 0;
+  width: 555px;
+  height: 19px;
+  gap: 100px;
+
+  &-nav {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #7d7d7d;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #03a9f4;
+    }
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 92px;
+  column-gap: 65px;
+  row-gap: 130px;
+
+  &-card {
+    max-width: 420px;
+
+    &-img {
+      width: 420px;
+      height: auto;
+    }
+
+    &-content {
+      margin-top: 65px;
+    }
+
+    &-name {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #b4ad9e;
+      cursor: pointer;
+    }
+
+    &-title {
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      color: #626262;
+    }
+
+    &-text {
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #626262;
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 70px;
+
+  &-btn {
+    width: 165px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #626262;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &-text {
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #626262;
+    }
+  }
+}
